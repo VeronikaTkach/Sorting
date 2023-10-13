@@ -3,8 +3,10 @@ function sorting(arr){
         for (index=0; index<arr.length-1; index++){
             if (arr[index]>arr[index+1]){
                 let item = arr[index];
-                arr.splice(index, 1);
-                arr.splice(index+1, 0, item)
+                arr[index] = arr[index+1];
+                arr[index+1] = item;
+                // arr.splice(index, 1);
+                // arr.splice(index+1, 0, item)
             }
         }
     }
